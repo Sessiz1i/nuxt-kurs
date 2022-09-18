@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
   /*
@@ -22,13 +21,11 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: [],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [],
   /*
   ** Nuxt.js dev-modules
   */
@@ -48,8 +45,7 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {
-  },
+  axios: {},
   /*
   ** Build configuration
   */
@@ -59,5 +55,6 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  server: { port: 8000 }
 }
