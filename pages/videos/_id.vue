@@ -1,24 +1,27 @@
 <template>
-<div>
-  <nuxt-child :video="video"/>
-</div>
+  <div>
+    <nuxt-child :video="video"/>
+  </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data () {
+
+  head () {
     return {
-      videos: [
-        { id: '16', name: 'Intro to NuxtJS' },
-        { id: '1', name: 'Intro to VueJS' },
-        { id: '71', name: 'Intro to Techniques for Library X' }
-      ]
+      titleTemplate: `%s ${this.video.name} - Çizgi Albüm`
     }
   },
   computed: {
-    video () {
-      return this.videos.find(video => video.id == this.$route.params.id)
-    }
+    ...mapState({
+      video: 'currentVideo'
+    })
+  },
+  async fetch ({ $axios, params, store }) {
+    const { data: video } = await $axios.get(`/videos/${params.id}`)
+    store.commit('SET_CURRENT_VIDEO', video)
   }
 }
 </script>

@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: 'videos'
+  name: 'videos',
+  head: {
+    titleTemplate: 'Videos - %s'
+}
 }
 </script>
 

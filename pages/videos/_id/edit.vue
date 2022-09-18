@@ -1,14 +1,15 @@
 <template>
-<div>
-  <h1>
-    Edit Video {{video.name}}
-  </h1>
-</div>
+  <div>
+    <h1>
+      Edit Video {{ video.name }}
+    </h1>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ['video']
+  props: ['video'],
+  head: { title: 'Edit' }
 }
 </script>
 

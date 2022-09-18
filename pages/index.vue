@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <logo/>
       <h1 class="title">
         nuxt-kurs
       </h1>
@@ -32,6 +32,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  head: { title: 'Ana Sayfa' },
   components: {
     Logo
   }
@@ -50,7 +51,7 @@ export default {
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
