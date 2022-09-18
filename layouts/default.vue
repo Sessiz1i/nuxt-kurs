@@ -1,53 +1,17 @@
 <template>
-  <div>
-    <div id="nav">
-        <div class="nav-content">
-          <nuxt-link to="/">Home</nuxt-link>
-          <nuxt-link to="/videos">Videos</nuxt-link>
-        </div>
-    </div>
-    <div class="content">
+  <v-app>
+      <v-app-bar app color="blue">
+        <v-btn text to="/">Çizgi Albüm</v-btn>
+        <v-btn text to="/videos">Videos</v-btn>
+      </v-app-bar>
+    <v-main>
       <nuxt/>
-    </div>
-  </div>
+    </v-main>
+  </v-app>
 </template>
 
 <style>
-.content{
-  max-width: 50rem;
-  margin: auto;
-}
-.nav-content{
-  display: flex;
-  max-width: 50rem;
-  margin: auto;
-}
-#nav {
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  background-color: #333;
-}
-
-#nav a {
-  color: white;
-  letter-spacing: 1px;
-  padding: .5rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all .3s;
-}
-#nav a:hover{
-  background-color: #41b883;
-  color: #333333;
-}
-#nav a.nuxt-link-exact-active{
-  background-color: #41b883;
-  color: white;
-}
-html {
+/*html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
@@ -99,5 +63,5 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
+}*/
 </style>

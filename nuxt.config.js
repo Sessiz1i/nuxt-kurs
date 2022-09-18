@@ -4,7 +4,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title:'',
+    title: '',
     titleTemplate: '%s - Çizgi Albüm',
     meta: [
       { charset: 'utf-8' },
@@ -14,6 +14,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+  manifest: {
+    lang: 'tr',
   },
   /*
   ** Customize the progress-bar color
@@ -33,6 +36,7 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     // '@nuxtjs/eslint-module'
+    '@nuxtjs/vuetify',
   ],
   /*
   ** Nuxt.js modules
