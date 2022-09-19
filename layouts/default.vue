@@ -1,9 +1,18 @@
 <template>
   <v-app>
-      <v-app-bar app color="blue">
-        <v-btn text to="/">Çizgi Albüm</v-btn>
-        <v-btn text to="/videos">Videos</v-btn>
-      </v-app-bar>
+    <v-app-bar app color="blue">
+      <v-btn text to="/">Çizgi Albüm</v-btn>
+      <v-btn text to="/videos">Videos</v-btn>
+      <v-spacer/>
+      <div v-if="$auth.loggedIn">
+        {{ $auth.user?.email }}
+        <v-btn text to="">Logout</v-btn>
+      </div>
+      <div v-else rigth>
+        <v-btn text to="/login">Login</v-btn>
+        <v-btn text>Register</v-btn>
+      </div>
+    </v-app-bar>
     <v-main>
       <nuxt/>
     </v-main>
@@ -11,6 +20,10 @@
 </template>
 
 <style>
+.v-btn__content {
+  font-weight: 800;
+}
+
 /*html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   Roboto, 'Helvetica Neue', Arial, sans-serif;
